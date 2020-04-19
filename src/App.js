@@ -15,7 +15,7 @@ function App() {
 
 useEffect(() => {
   axios
-  .get('http://localhost:3001/lists?_embed=tasks')
+  .get('http://localhost:3001/react-gh-pages/lists?_embed=tasks')
   .then(({ data }) =>{
     setLists(data);
       })
@@ -59,7 +59,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('http://localhost:3001/tasks/' + taskId, {text: newTaskText}) 
+      axios.patch('http://localhost:3001/react-gh-pages/tasks/' + taskId, {text: newTaskText}) 
     .catch(() => {
         alert('Не вдалося обновити задачу');
       });
@@ -76,7 +76,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.delete('http://localhost:3001/tasks/' + taskId) 
+      axios.delete('http://localhost:3001/react-gh-pages/tasks/' + taskId) 
     .catch(() => {
         alert('Не вдалося видалити задачу');
       });
