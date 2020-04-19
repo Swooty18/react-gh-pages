@@ -10,7 +10,7 @@ import './List.scss'
 const List = ({ items, isRemovable , onClick , onRemove, onClickItem, activeItem }) => {
 
     const removeList = (item) => {
-        if(window.confirm('Ви дійсно хочете видалити список?')){
+        if(window.confirm('Are you sure you want to delete the list?')){
             axios.delete('https://my-json-server.typicode.com/swooty18/db/lists/' + item.id).then(() =>{
                 onRemove(item.id);
             });

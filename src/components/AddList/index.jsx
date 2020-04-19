@@ -22,7 +22,7 @@ const AddButtonList =  ({ onAdd })  => {
 
     const addList = () => {
         if(!inputValue){
-            alert('Введіть назву списку');
+            alert('Enter a name for the list');
             return;
         }
         setIsLoading(true);
@@ -32,7 +32,7 @@ const AddButtonList =  ({ onAdd })  => {
             onClose();  
         })
         .catch(() => {
-            alert('Помилка при додаванні списку');
+            alert('Error adding list');
         })
         .finally(() => {
             setIsLoading(false);
@@ -61,10 +61,10 @@ const AddButtonList =  ({ onAdd })  => {
                     <img 
                     onClick={onClose}
                     src={closeSvg} alt="Close-button" className="add-list__popup-close-btn"></img>
-                <input value={inputValue} onChange={e => setInputValue(e.target.value)} type="text" className="field" placeholder="Назва списку"/>
+                <input value={inputValue} onChange={e => setInputValue(e.target.value)} type="text" className="field" placeholder="List name"/>
                 
                 <button onClick={addList} className="button">
-                    {isLoading ?  'Додавання...' : 'Додати'}
+                    {isLoading ?  'Adding...' : 'Add'}
                     </button>                
             </div>
             }

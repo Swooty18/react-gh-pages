@@ -12,13 +12,13 @@ import Task from './Task.jsx'
 const Tasks = ({ list, onEditTitle, onAddTask, onCompleteTask, onRemoveTask,onEditTask, withoutEmpty }) => {
 
   const editTitle = () =>{
-    const newTitle = window.prompt('Назва списку',list.name)
+    const newTitle = window.prompt('List name',list.name)
     if (newTitle) {
       onEditTitle(list.id, newTitle);
       axios.patch('https://my-json-server.typicode.com/swooty18/db/lists/' + list.id, {
         name: newTitle
       }).catch(() => {
-        alert('Не вдалося обновити назву списку');
+        alert('Failed to update list name');
       });
     }
   };
@@ -34,7 +34,7 @@ const Tasks = ({ list, onEditTitle, onAddTask, onCompleteTask, onRemoveTask,onEd
             <img onClick={editTitle} src={editSvg} alt="Edit-icon"/>
         </div>
        <AddTaskForm list={list} onAddTask={onAddTask}/>
-        {!withoutEmpty && list.tasks && !list.tasks.length && <h2>Задач немає!</h2>}
+        {!withoutEmpty && list.tasks && !list.tasks.length && <h2>No tasks!</h2>}
         {
           list.tasks && list.tasks.map((task) => 
             <Task key={task.id} 

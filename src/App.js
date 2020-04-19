@@ -59,7 +59,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('https://my-json-server.typicode.com/swooty18/db/tasks/' + taskId, {text: newTaskText}) 
+      axios.patch('https://my-json-server.typicode.com/swooty18/db/tasks/' + taskId, {text: newTaskText}).then (console.log(taskId))
     .catch(() => {
         alert('Не вдалося обновити задачу');
       });

@@ -24,7 +24,7 @@ const addTask = () => {
              toggleForm();
           })
           .catch(() => {
-              alert('Помилка при додаванні задачі');
+              alert('Error adding task');
           })
           .finally ( () => {
             setIsLoading(false);
