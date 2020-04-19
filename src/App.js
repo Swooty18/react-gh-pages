@@ -15,7 +15,7 @@ function App() {
 
 useEffect(() => {
   axios
-  .get('http://localhost:3001/lists?_embed=tasks')
+  .get('https://my-json-server.typicode.com/swooty18/db/lists?_embed=tasks')
   .then(({ data }) =>{
     setLists(data);
       })
@@ -59,7 +59,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('http://localhost:3001/tasks/' + taskId, {text: newTaskText}) 
+      axios.patch('https://my-json-server.typicode.com/swooty18/db/tasks/' + taskId, {text: newTaskText}) 
     .catch(() => {
         alert('Не вдалося обновити задачу');
       });
@@ -76,7 +76,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.delete('http://localhost:3001/tasks/' + taskId) 
+      axios.delete('https://my-json-server.typicode.com/swooty18/db/tasks/' + taskId) 
     .catch(() => {
         alert('Не вдалося видалити задачу');
       });
@@ -97,7 +97,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('http://localhost:3001/tasks/' + taskId, {completed}) 
+      axios.patch('https://my-json-server.typicode.com/swooty18/db/tasks/' + taskId, {completed}) 
     .catch(() => {
         alert('Не вдалося обновити задачу');
       });

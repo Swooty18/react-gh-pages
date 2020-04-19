@@ -11,7 +11,7 @@ const List = ({ items, isRemovable , onClick , onRemove, onClickItem, activeItem
 
     const removeList = (item) => {
         if(window.confirm('Ви дійсно хочете видалити список?')){
-            axios.delete('http://localhost:3001/lists/' + item.id).then(() =>{
+            axios.delete('https://my-json-server.typicode.com/swooty18/db/lists/' + item.id).then(() =>{
                 onRemove(item.id);
             });
             onRemove(item) ;

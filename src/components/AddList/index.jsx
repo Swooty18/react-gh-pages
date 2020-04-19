@@ -26,7 +26,7 @@ const AddButtonList =  ({ onAdd })  => {
             return;
         }
         setIsLoading(true);
-        axios.post('http://localhost:3001/lists',{ name: inputValue})
+        axios.post('https://my-json-server.typicode.com/swooty18/db/lists',{ name: inputValue})
         .then(({ data }) => {
             onAdd(data);  
             onClose();  
