@@ -97,7 +97,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('http://localhost:3001/tasks/' + taskId, {completed}) 
+      axios.patch('http://localhost:3001/react-gh-pages/tasks/' + taskId, {completed}) 
     .catch(() => {
         alert('Не вдалося обновити задачу');
       });

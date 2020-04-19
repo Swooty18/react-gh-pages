@@ -26,7 +26,7 @@ const AddButtonList =  ({ onAdd })  => {
             return;
         }
         setIsLoading(true);
-        axios.post('http://localhost:3001/lists',{ name: inputValue})
+        axios.post('http://localhost:3001/react-gh-pages/lists',{ name: inputValue})
         .then(({ data }) => {
             onAdd(data);  
             onClose();  

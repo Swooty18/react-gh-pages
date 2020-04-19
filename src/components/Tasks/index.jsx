@@ -15,7 +15,7 @@ const Tasks = ({ list, onEditTitle, onAddTask, onCompleteTask, onRemoveTask,onEd
     const newTitle = window.prompt('Назва списку',list.name)
     if (newTitle) {
       onEditTitle(list.id, newTitle);
-      axios.patch('http://localhost:3001/lists/' + list.id, {
+      axios.patch('http://localhost:3001/react-gh-pages/lists/' + list.id, {
         name: newTitle
       }).catch(() => {
         alert('Не вдалося обновити назву списку');
