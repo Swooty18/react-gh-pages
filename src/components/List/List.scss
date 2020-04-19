@@ -1,0 +1,65 @@
+.list{
+  $self: &;
+  margin-bottom: 30px;
+  &__add-button{
+    opacity: 0.5;
+  
+  &:hover{
+    opacity: 1.0;
+    background-color: #F4f6f8!important;
+  }
+  }
+  
+
+    li{
+display: flex;
+align-items: center;
+
+ &:hover #{$self}__remove-icon {
+   opacity:0.2;
+ }
+
+ #{$self}__remove-icon{
+  opacity: 0;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+span{
+  flex:1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  white-space: nowrap;
+}
+
+padding: 10px 10px;
+cursor: pointer;
+margin-bottom: 5px;
+&:hover{
+  background-color: rgba(255,255,255,0.6);
+
+}
+
+&.active{
+background-color: #4a7db7;
+border: 1px solid #000000;
+color: #fff;
+border-radius: 4px;
+}
+
+i{
+  margin-right: 5px;
+  .svg-icon{
+    width: 20px;
+    height: 20px;
+}
+
+}
+  }
+  
+}
+
+

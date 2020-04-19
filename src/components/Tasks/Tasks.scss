@@ -1,0 +1,121 @@
+.tasks{
+    &:not(:last-of-type){
+        margin-bottom: 40px;
+      }
+    &__title{
+        display: flex;
+      box-sizing: border-box;
+      background-color: #4272ad;
+      color: #fff;
+      font-size: 20px;
+      padding: 20px;
+      min-height: 70px;
+      width: 100%;
+      border: 1px solid #315589;
+      cursor: pointer;
+      span{
+          flex: 1;
+      }
+      &:hover{
+          img{
+              opacity: 0.2;
+          }
+      }
+      img{
+          opacity: 0;
+          
+          &:hover{
+              opacity: 1;
+          }
+      }
+    }
+    h2{
+        font: 27px bold;
+        color: #C9D1D3;
+        text-align: center;
+        position: absolute;
+        left: 55%;
+        top: 50%;
+    }
+    &__form{
+        display: flex;
+        align-items: center;
+        background-color: #cecece;
+        padding: 5px;
+        img{
+            margin: 15px;
+        }
+        .button{
+            width: 105px;
+            height: 100%;
+            padding: 9px 15px;
+        }
+    }
+    &-items{
+        
+display: flex;
+align-items: center;
+        border-bottom: 1px solid #e7ebea;
+        position: relative;
+        min-height: 50px;
+        label{
+            position: absolute;
+            height: 100%;
+            width: 545px;
+            cursor: pointer;
+        }
+        &-text{
+            padding: 16px;
+            border-left: 6px  double #efdadf;
+            border-right: 1px  solid #e7ebea;
+            margin-left: 5px;
+            flex: 1;
+        }
+        &:hover &-actions{
+            opacity: 1;
+            
+        }
+        &:hover{
+            background-color: #fcfed5;
+        }
+        &:hover input{
+            background-color: #fcfed5;
+        }
+        &-actions{
+            display: flex;
+            opacity:0;
+            transition: opacity 0.15s ease-in-out;
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 32px;
+                
+                
+                margin-left: 5px;
+                cursor: pointer;
+                &:first-child{
+                    border-right: 1px solid #cccccc;
+                }     
+                
+            }
+            
+        }
+        svg{
+            width: 11px;
+            height: 11px;
+        }
+        
+    }
+    .checkbox{
+        padding: 15px;
+        input{
+        width: 15px;
+        height: 15px;
+        }
+        
+        
+    }
+    
+  }
