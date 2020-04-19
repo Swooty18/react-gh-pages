@@ -127,7 +127,7 @@ useEffect(() => {
       
       <List 
         onClickItem={list => {
-          history.push(`/`);
+          history.push(`/react-gh-pages/`);
         }}
       items={[
         {
@@ -149,7 +149,7 @@ useEffect(() => {
         setLists(newLists);
       }}
       onClickItem={list => {
-        history.push(`/lists/${list.id}`);
+        history.push(`/react-gh-pages/lists/${list.id}`);
       }}
       activeItem={activeItem}
       isRemovable
