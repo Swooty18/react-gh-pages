@@ -18,7 +18,7 @@ const addTask = () => {
         completed: false
       };
     setIsLoading(true);
-          axios.post('https://my-json-server.typicode.com/swooty18/db/tasks/', obj).then(({ data }) =>{
+          axios.post('https://my-project-matss.herokuapp.com/tasks/', obj).then(({ data }) =>{
             
               onAddTask(list.id,data);
              toggleForm();
