@@ -15,7 +15,7 @@ const Tasks = ({ list, onEditTitle, onAddTask, onCompleteTask, onRemoveTask,onEd
     const newTitle = window.prompt('List name',list.name)
     if (newTitle) {
       onEditTitle(list.id, newTitle);
-      axios.patch('https://my-json-server.typicode.com/swooty18/db/lists/' + list.id, {
+      axios.patch('https://my-project-matss.herokuapp.com/lists/' + list.id, {
         name: newTitle
       }).catch(() => {
         alert('Failed to update list name');
