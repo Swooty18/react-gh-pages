@@ -20,7 +20,7 @@ const addTask = () => {
     setIsLoading(true);
           axios.post('https://my-project-matss.herokuapp.com/tasks/', obj).then(({ data }) =>{
             
-              onAddTask(list.id,data);
+              onAddTask(data.listId,data);
              toggleForm();
           })
           .catch(() => {
