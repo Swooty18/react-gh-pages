@@ -39,7 +39,7 @@ const addTask = () => {
          <input value={inputValue} valuetype="text" className="field" placeholder="Start typing here to create a task..." onChange={e => setInputValue(e.target.value)}/>
                 
                 <button  onClick={addTask} className="button">
-                  {isLoading ? 'Додавання' : 'Add Task'}
+                  {isLoading ? 'Adding' : 'Add Task'}
                     </button> 
       </div>
     );

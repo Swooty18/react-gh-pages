@@ -31,7 +31,7 @@ useEffect(() => {
   };
 
   const onAddTask = (listId ,taskObj) =>{
-      console.log("topp")
+      
     const newList = lists.map(item =>{
     
       if(item.id === listId) {
@@ -41,15 +41,15 @@ useEffect(() => {
 
       return item;
     }); 
-    console.log(newList)
+    
     setLists(newList);
     
   };
 
   const onEditTask = (listId,taskId,taskText) => {
     const newTaskText = window.prompt('Task text', taskText);
-     const active = activeItem;
-     console.log(activeItem)
+     
+     
     if(!newTaskText) {
       return;
     }
@@ -67,7 +67,7 @@ useEffect(() => {
         return item;
       });
       setLists(newList);
-      axios.patch('https://my-project-matss.herokuapp.com/tasks/' + taskId, {text: newTaskText}).then (console.log(taskId))
+      axios.patch('https://my-project-matss.herokuapp.com/tasks/' + taskId, {text: newTaskText})
     .catch(() => {
         alert('Failed to update task');
       });
